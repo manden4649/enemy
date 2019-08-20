@@ -9,25 +9,30 @@ function init() {
     stage.addChild(enemy);
 
 // array[Y][X]が現在の位置とする
-
-    if(isLeft === true) {
-        player.x -= 3;
-        // array[Y][X] = 0;
-        // array[Y][X-1] = ID;
+    for (var Y = 0; Y < 3; Y++){
+        for (var X = 0; X < 4; X++){
+            
+            if(isLeft === true) {
+                array[Y][X] = 0;
+                array[Y][X-1] = ID;
+                
+            }
+            if(isUp === true){
+                array[Y][X] = 0;
+                array[Y-1][X] = ID;
+                
+            }
+            if(isRight === true){
+                array[Y][X] = 0;
+                array[Y-1][X] = ID
+                
+            }
+            if(isDown === true) {array[Y][X] = 0;
+                array[Y-1][X] = ID
+                                 
+            }
+        }
     }
-    if(isUp === true){
-        player.y -= 3;
-        // array[Y][X] = 0;
-        // array[Y-1][X] = ID;
-    }
-    if(isRight === true){
-        player.x += 3;
-    }
-    if(isDown === true) {
-        player.y += 3;
-    }
-
-
     stage.update();
 }
 
