@@ -12,7 +12,7 @@ function init() {
     for (var Y = 0; Y < 3; Y++){
         for (var X = 0; X < 4; X++){
             
-            if(isLeft === true) {
+            if(array === ) {
                 array[Y][X] = 0;
                 array[Y][X-1] = ID;
                 
